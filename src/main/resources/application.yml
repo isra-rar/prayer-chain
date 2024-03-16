@@ -3,16 +3,13 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/prayer_chain
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: 78z9GdU4x3Xh
-    driver-class-name: org.postgresql.Driver
+    password: senhaForte
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-

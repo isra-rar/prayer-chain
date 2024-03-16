@@ -20,12 +20,12 @@ public class Church {
     private long id;
     private String name;
 
-    @OneToMany
+    @OneToMany(mappedBy = "church")
     private List<Cell> cells = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(mappedBy = "church")
     private List<User> members = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(mappedBy = "church")
     private List<Pray> prays = new ArrayList<>();
 }

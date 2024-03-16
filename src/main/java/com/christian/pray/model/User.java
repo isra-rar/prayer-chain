@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity(name = "members")
 @Getter
@@ -24,5 +26,14 @@ public class User {
     private String email;
     private String cellphone;
     private LocalDate birthday;
+
+    @OneToMany(mappedBy = "member")
+    private List<Pray> prays = new ArrayList<>();
+
+    @ManyToOne
+    private Cell cell;
+
+    @ManyToOne
+    private Church church;
 
 }

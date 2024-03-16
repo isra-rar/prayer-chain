@@ -23,6 +23,9 @@ public class Cell {
     private String name;
     private String leaderName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "cell")
     private List<User> members = new ArrayList<>();
+
+    @ManyToOne
+    private Church church;
 }
