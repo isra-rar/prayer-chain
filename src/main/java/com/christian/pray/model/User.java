@@ -1,5 +1,7 @@
 package com.christian.pray.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,9 +32,11 @@ public class User {
     @OneToMany(mappedBy = "member")
     private List<Pray> prays = new ArrayList<>();
 
+    @JsonIgnore
     @ManyToOne
     private Cell cell;
 
+    @JsonIgnore
     @ManyToOne
     private Church church;
 

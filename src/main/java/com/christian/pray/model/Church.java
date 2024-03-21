@@ -28,4 +28,5 @@ public class Church {
 
     @OneToMany(mappedBy = "church")
     private List<Pray> prays = new ArrayList<>();
+
 }
