@@ -29,18 +29,20 @@ public class Pray {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String prayTarget;
+    private String targetPray;
     private String description;
 
     @Enumerated(EnumType.STRING)
     private PrayType prayType;
 
-    @JsonIgnore
-    private LocalDateTime createdAt = LocalDateTime.now();
-
     @ManyToOne
     private User member;
+
+    @JsonIgnore
     @ManyToOne
     private Church church;
+
+    @JsonIgnore
+    private LocalDateTime createdAt = LocalDateTime.now();
 
 }

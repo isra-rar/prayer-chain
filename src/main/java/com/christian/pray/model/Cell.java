@@ -31,7 +31,4 @@ public class Cell {
     @ManyToOne
     private Church church;
 
-    public void addMembertoCell(User member) {
-        this.members.add(member);
-    }
 }

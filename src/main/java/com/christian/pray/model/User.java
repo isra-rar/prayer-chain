@@ -29,6 +29,7 @@ public class User {
     private String cellphone;
     private LocalDate birthday;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "member")
     private List<Pray> prays = new ArrayList<>();
 
