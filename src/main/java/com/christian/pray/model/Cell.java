@@ -25,7 +25,7 @@ public class Cell {
     private String leaderName;
 
     @OneToMany(mappedBy = "cell")
-    private List<User> members = new ArrayList<>();
+    private List<Person> persons = new ArrayList<>();
 
     @JsonIgnore
     @ManyToOne

@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SimpleChurchDTO {
+public class SimpleChurchResponseDTO {
 
     private long id;
     private String name;

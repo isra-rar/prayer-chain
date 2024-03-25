@@ -1,7 +1,6 @@
 package com.christian.pray.services.impl;
 
-import com.christian.pray.DTO.response.ChurchResponseDTO;
-import com.christian.pray.DTO.response.SimpleChurchDTO;
+import com.christian.pray.DTO.response.SimpleChurchResponseDTO;
 import com.christian.pray.model.Church;
 import com.christian.pray.repositories.ChurchRepository;
 import com.christian.pray.services.ChurchService;
@@ -24,9 +23,9 @@ public class ChurchServiceImpl implements ChurchService {
     }
 
     @Override
-    public List<SimpleChurchDTO> getAllChurchs() {
+    public List<SimpleChurchResponseDTO> getAllChurchs() {
         return churchRepository.findAll().stream()
-                .map(church -> modelMapper.map(church, SimpleChurchDTO.class)).collect(Collectors.toList());
+                .map(church -> modelMapper.map(church, SimpleChurchResponseDTO.class)).collect(Collectors.toList());
     }
 
     @Override
@@ -36,9 +35,9 @@ public class ChurchServiceImpl implements ChurchService {
     }
 
     @Override
-    public SimpleChurchDTO getSimpleChurch(long churchId) {
+    public SimpleChurchResponseDTO getSimpleChurch(long churchId) {
         Church church = getChurchById(churchId).get();
-        return modelMapper.map(church, SimpleChurchDTO.class);
+        return modelMapper.map(church, SimpleChurchResponseDTO.class);
 
     }
 

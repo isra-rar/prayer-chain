@@ -2,8 +2,6 @@ package com.christian.pray.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.Generated;
-import org.hibernate.annotations.GenerationTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +22,7 @@ public class Church {
     private List<Cell> cells = new ArrayList<>();
 
     @OneToMany(mappedBy = "church")
-    private List<User> members = new ArrayList<>();
+    private List<Person> persons = new ArrayList<>();
 
     @OneToMany(mappedBy = "church")
     private List<Pray> prays = new ArrayList<>();

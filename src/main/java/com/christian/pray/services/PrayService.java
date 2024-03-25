@@ -1,17 +1,19 @@
 package com.christian.pray.services;
 
 
-import com.christian.pray.DTO.request.PrayRequestDTO;
 import com.christian.pray.DTO.response.PrayResponseDTO;
-import com.christian.pray.DTO.response.SimplePrayDTO;
+import com.christian.pray.DTO.response.SimplePrayResponseDTO;
+import com.christian.pray.DTO.request.PrayRequest;
 
 import java.util.List;
 
 public interface PrayService {
 
-    PrayResponseDTO insertPray(PrayRequestDTO prayRequestDTO, long memberId);
+    SimplePrayResponseDTO getPrayById(long prayId);
 
-    List<SimplePrayDTO> getAllPrayByIdMember(long memberId);
+    PrayResponseDTO insertPray(PrayRequest prayRequest, long personId);
+
+    List<SimplePrayResponseDTO> getAllPrayByIdPerson(long personId);
 
 
 }

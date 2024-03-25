@@ -1,6 +1,5 @@
 package com.christian.pray.DTO.response;
 
-import com.christian.pray.model.User;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,6 +11,7 @@ public class ChurchResponseDTO {
 
     private long id;
     private String name;
-
-    private List<MemberResponseDTO> members;
+    private String leaderName;
+    private long churchId;
+    private List<SimplePersonResponseDTO> members;
 }

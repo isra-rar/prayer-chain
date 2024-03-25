@@ -1,7 +1,7 @@
 package com.christian.pray.services.impl;
 
-import com.christian.pray.DTO.request.CellRequestDTO;
 import com.christian.pray.DTO.response.CellResponseDTO;
+import com.christian.pray.DTO.request.CellRequest;
 import com.christian.pray.model.Cell;
 import com.christian.pray.model.Church;
 import com.christian.pray.repositories.CellRepository;
@@ -33,7 +33,7 @@ public class CellServiceImpl implements CellService {
     }
 
     @Override
-    public CellResponseDTO insertCell(CellRequestDTO cellDTO, long churchId) {
+    public CellResponseDTO insertCell(CellRequest cellDTO, long churchId) {
         Church church = churchService.getChurchById(churchId).get();
         Cell cell = modelMapper.map(cellDTO, Cell.class);
         cell.setChurch(church);

@@ -1,4 +1,4 @@
-package com.christian.pray.DTO.response;
+package com.christian.pray.controllers.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,13 +1,13 @@
 package com.christian.pray.DTO.response;
 
+import java.time.LocalDate;
+
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
-
 @Getter
 @Setter
-public class MemberResponseDTO {
+public class PersonResponseDTO {
 
     private long id;
     private String username;
@@ -16,5 +16,5 @@ public class MemberResponseDTO {
     private String email;
     private String cellphone;
     private LocalDate birthday;
-
+    private boolean isMember;
 }
